@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Phone number validator{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@26.3.2/build/css/intlTelInput.css">
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@26.3.2/build/js/intlTelInputWithUtils.min.js"></script>
+{% endblock %}
+
+{% block body %}
+  <div class="form-wrapper">
+    <form id="phone-form" novalidate>
+      <h2>Validate phone number</h2>
+
+      <div class="form-row">
+        <label for="phone-number">Phone number</label>
+        <input id="phone-number" name="phone" type="tel" autocomplete="tel" required />
+      </div>
+
+      <input type="submit" value="Validate" class="button" />
+
+      <div id="phone-form--status" aria-live="polite"></div>
+    </form>
+  </div>
+{% endblock %}

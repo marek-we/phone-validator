@@ -1,3 +1,93 @@
+*,
+:after,
+:before {
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: skyblue;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-row input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.field-error {
+  margin-top: 4px;
+  color: red;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .15s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0069d9;
+}
+
+#phone-form--status {
+  display: none;
+  margin-top: 20px;
+}
+
+#phone-form--status.error {
+  color: red;
+}
+
+.form-row .iti {
+  display: block;
+}
+
+.form-row .iti__search-input {
+  padding-left: 30px;
+  padding-right: 28px;
 }
